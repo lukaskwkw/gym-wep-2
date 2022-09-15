@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar, Text } from '@mantine/core';
+import { Link } from 'react-router-dom';
 
 export function ShellNavbar(opened: boolean): React.ReactElement<any, string | React.JSXElementConstructor<any>> | undefined {
   return <Navbar
@@ -10,7 +11,7 @@ export function ShellNavbar(opened: boolean): React.ReactElement<any, string | R
   >
     <Navbar.Section>Logo</Navbar.Section>
     <Navbar.Section grow mt="md">
-      <Text>Link1</Text>
+      <Link to={"/plans"}>Plans</Link>
       <Text>Link2</Text>
       <Text>Link3</Text>
     </Navbar.Section>

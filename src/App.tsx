@@ -4,10 +4,6 @@ import { Shell } from './components/Shell';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
-export const Login = () => <div><img alt="Login Page" /></div>
-export const Home = () => <div><img alt="Home Page" /></div>
-export const NoMatch = () => <div>No match</div>
-
 interface Props {
   manager: Manager;
 }

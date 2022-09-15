@@ -7,5 +7,5 @@ export interface TokenHandler {
 export const tokenHandler: TokenHandler = {
     getTokenFromStorage: () => undefined,
     setTokenToStorage: (token: string) => { },
-    isTokenExpired: () => true,
+    isTokenExpired: () => false,
 }

@@ -7,9 +7,9 @@ import EventEmitter from 'events';
 import { Api, ApiContext } from './api';
 import { authService } from './api/authService';
 import { tokenHandler } from './services/TokenHandler';
+import { plansApi } from './api/plans';
 
 jest.mock('./services/TokenHandler');
-jest.mock('./api/authService');
 const eventBus = new EventEmitter();
 const appManagerMock: Manager = {
   initial: {
@@ -20,7 +20,7 @@ const appManagerMock: Manager = {
   tokenHandler
 };
 
-const apiMock = new Api(eventBus, tokenHandler, authService);
+const apiMock = new Api(eventBus, tokenHandler, authService, plansApi);
 describe('App', () => {
   it('should render a navigation and default route should be home when token is not expired', () => {
     tokenHandler.isTokenExpired = jest.fn().mockImplementation(() => false);
